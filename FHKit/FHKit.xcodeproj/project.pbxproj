@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E02ACA5A1C571AB200E8C049 /* FHTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E02ACA591C571AB200E8C049 /* FHTool.m */; };
+		E02ACA5D1C571AEC00E8C049 /* FHTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = E02ACA5C1C571AEC00E8C049 /* FHTextView.m */; };
 		E0D4C0F01C337325008AD8B6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E0D4C0EF1C337325008AD8B6 /* main.m */; };
 		E0D4C0F31C337325008AD8B6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E0D4C0F21C337325008AD8B6 /* AppDelegate.m */; };
 		E0D4C0F61C337325008AD8B6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0D4C0F51C337325008AD8B6 /* ViewController.m */; };
@@ -15,9 +17,7 @@
 		E0D4C0FE1C337325008AD8B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0D4C0FC1C337325008AD8B6 /* LaunchScreen.storyboard */; };
 		E0D4C1091C337325008AD8B6 /* FHKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E0D4C1081C337325008AD8B6 /* FHKitTests.m */; };
 		E0D4C1141C337325008AD8B6 /* FHKitUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E0D4C1131C337325008AD8B6 /* FHKitUITests.m */; };
-		E0D4C1231C337333008AD8B6 /* FHTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E0D4C1221C337333008AD8B6 /* FHTool.m */; };
 		E0D4C1281C33733A008AD8B6 /* UIColor+FHColorTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E0D4C1251C33733A008AD8B6 /* UIColor+FHColorTool.m */; };
-		E0D4C1291C33733A008AD8B6 /* FHCustomTF.m in Sources */ = {isa = PBXBuildFile; fileRef = E0D4C1271C33733A008AD8B6 /* FHCustomTF.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E02ACA581C571AB200E8C049 /* FHTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHTool.h; sourceTree = "<group>"; };
+		E02ACA591C571AB200E8C049 /* FHTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHTool.m; sourceTree = "<group>"; };
+		E02ACA5B1C571AEC00E8C049 /* FHTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHTextView.h; sourceTree = "<group>"; };
+		E02ACA5C1C571AEC00E8C049 /* FHTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHTextView.m; sourceTree = "<group>"; };
 		E0D4C0EB1C337324008AD8B6 /* FHKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FHKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0D4C0EF1C337325008AD8B6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E0D4C0F11C337325008AD8B6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -54,12 +58,8 @@
 		E0D4C10F1C337325008AD8B6 /* FHKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FHKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0D4C1131C337325008AD8B6 /* FHKitUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FHKitUITests.m; sourceTree = "<group>"; };
 		E0D4C1151C337325008AD8B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E0D4C1211C337333008AD8B6 /* FHTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHTool.h; sourceTree = "<group>"; };
-		E0D4C1221C337333008AD8B6 /* FHTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHTool.m; sourceTree = "<group>"; };
 		E0D4C1241C33733A008AD8B6 /* UIColor+FHColorTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+FHColorTool.h"; sourceTree = "<group>"; };
 		E0D4C1251C33733A008AD8B6 /* UIColor+FHColorTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+FHColorTool.m"; sourceTree = "<group>"; };
-		E0D4C1261C33733A008AD8B6 /* FHCustomTF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHCustomTF.h; sourceTree = "<group>"; };
-		E0D4C1271C33733A008AD8B6 /* FHCustomTF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHCustomTF.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,12 +112,12 @@
 			children = (
 				E0D4C0F11C337325008AD8B6 /* AppDelegate.h */,
 				E0D4C0F21C337325008AD8B6 /* AppDelegate.m */,
-				E0D4C1211C337333008AD8B6 /* FHTool.h */,
-				E0D4C1221C337333008AD8B6 /* FHTool.m */,
+				E02ACA581C571AB200E8C049 /* FHTool.h */,
+				E02ACA591C571AB200E8C049 /* FHTool.m */,
 				E0D4C1241C33733A008AD8B6 /* UIColor+FHColorTool.h */,
 				E0D4C1251C33733A008AD8B6 /* UIColor+FHColorTool.m */,
-				E0D4C1261C33733A008AD8B6 /* FHCustomTF.h */,
-				E0D4C1271C33733A008AD8B6 /* FHCustomTF.m */,
+				E02ACA5B1C571AEC00E8C049 /* FHTextView.h */,
+				E02ACA5C1C571AEC00E8C049 /* FHTextView.m */,
 				E0D4C0F41C337325008AD8B6 /* ViewController.h */,
 				E0D4C0F51C337325008AD8B6 /* ViewController.m */,
 				E0D4C0F71C337325008AD8B6 /* Main.storyboard */,
@@ -285,12 +285,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E0D4C1291C33733A008AD8B6 /* FHCustomTF.m in Sources */,
 				E0D4C1281C33733A008AD8B6 /* UIColor+FHColorTool.m in Sources */,
+				E02ACA5D1C571AEC00E8C049 /* FHTextView.m in Sources */,
 				E0D4C0F61C337325008AD8B6 /* ViewController.m in Sources */,
 				E0D4C0F31C337325008AD8B6 /* AppDelegate.m in Sources */,
 				E0D4C0F01C337325008AD8B6 /* main.m in Sources */,
-				E0D4C1231C337333008AD8B6 /* FHTool.m in Sources */,
+				E02ACA5A1C571AB200E8C049 /* FHTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +514,7 @@
 				E0D4C11A1C337325008AD8B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E0D4C11B1C337325008AD8B6 /* Build configuration list for PBXNativeTarget "FHKitTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +523,7 @@
 				E0D4C11D1C337325008AD8B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E0D4C11E1C337325008AD8B6 /* Build configuration list for PBXNativeTarget "FHKitUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +532,7 @@
 				E0D4C1201C337325008AD8B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

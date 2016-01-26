@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "UIColor+FHColorTool.h"
 #import "FHCustomTF.h"
-
+#import <stdarg.h>
 @interface ViewController ()
 
 @end
@@ -30,6 +30,7 @@
     textField.center = CGPointMake(200, 200);
     
     [self.view addSubview:textField];
+    
 }
 
 - (void)didReceiveMemoryWarning {
