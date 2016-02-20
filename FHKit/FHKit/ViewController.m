@@ -7,8 +7,10 @@
 //
 
 #import "ViewController.h"
+#import "FHTool.h"
+#import "FHOSVersionTool.h"
 #import "UIColor+FHColorTool.h"
-#import "FHCustomTF.h"
+#import "FHLblWithInfoBtn.h"
 #import <stdarg.h>
 @interface ViewController ()
 
@@ -21,16 +23,17 @@
     UIView *colorView = [[UIView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
     [self.view addSubview:colorView];
     colorView.backgroundColor = [UIColor fh_colorWithFFStyleRGB:0x000000];
+
     
+    FHLblWithInfoBtn *infoBtn = [[FHLblWithInfoBtn alloc] initWithFrame:CGRectMake(20, 20, 100, 20) title:@"sdafs" image:[UIImage imageNamed:@"calculate_img_chart_hydt"] handler:^{
+        NSLog(@"selelelelel");
+    }];
+    infoBtn.lblTitle.textColor = [UIColor blackColor];
+    [self.view addSubview:infoBtn];
     
-    FHCustomTF *textField = [[FHCustomTF alloc] initWithTip:@"手机号码"
-                                                placeholder:@"请输入手机号码"
-                                                buttonTitle:@"XXX"
-                                               textViewType:FHCustomTFTypeNumOnly];
-    textField.center = CGPointMake(200, 200);
-    
-    [self.view addSubview:textField];
-    
+    UILabel *label =[[ UILabel alloc] init];
+    label.textAlignment = FHTextAlignmentCenter;
+    IF_IOS7_OR_GREATER(NSLog(@"HAHAHA");)
 }
 
 - (void)didReceiveMemoryWarning {
