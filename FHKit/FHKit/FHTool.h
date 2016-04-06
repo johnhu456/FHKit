@@ -14,7 +14,7 @@
 #pragma mark - 字体部分
 
 #define FH_FONT_SYSTEM_WITH_SIZE(x) [UIFont systemFontOfSize:x]
-#define FH_FONT_THIN_WITH_SIZE(x) [UIFont fontWithName:@"STHeitiSC-Light" size:x]
+//#define FH_FONT_THIN_WITH_SIZE(x) [UIFont fontWithName:@"STHeitiSC-Light" size:x]
 
 #pragma mark - 颜色部分
 
@@ -51,6 +51,16 @@
 #else
     #define FH_TEXTSIZE(text, font) [text length] > 0 ? [text sizeWithFont:font] : CGSizeZero;
 #endif
+
+#pragma mark - Runtime
+
+#define GET_IVAR_WITH_CLASS(x) NSLog(@"Getting Ivar List In Class:%@================",NSStringFromClass(x));\
+                                unsigned int count1 = 0;\
+                                Ivar *var1 = class_copyIvarList([x class], &count1);\
+                                for (int i = 0 ;i < count1 ;i++) {\
+                                Ivar _var = *(var1 + i);\
+                                NSLog(@"Name:%s----- Type:%s",ivar_getName(_var),ivar_getTypeEncoding(_var));\
+}
 
 @interface FHTool : NSObject
 
