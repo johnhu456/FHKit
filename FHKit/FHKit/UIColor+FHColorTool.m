@@ -10,14 +10,7 @@
 
 @implementation UIColor (FHColorTool)
 
-+ (instancetype)fh_colorWithR:(CGFloat)red G:(CGFloat)green B:(CGFloat)blue
-{
-    return [UIColor fh_colorWithR:red
-                                G:green
-                                B:blue alpha:1];
-}
-
-+ (instancetype)fh_colorWithR:(CGFloat)red G:(CGFloat)green B:(CGFloat)blue alpha:(CGFloat)alpha
++ (instancetype)fh_ColorWithR:(CGFloat)red G:(CGFloat)green B:(CGFloat)blue alpha:(CGFloat)alpha
 {
     return [UIColor colorWithRed:red/255.f
                            green:green/255.f
@@ -25,9 +18,9 @@
                            alpha:alpha];
 }
 
-+ (instancetype)fh_colorWithFFStyleRGB:(int)rgb
++ (instancetype)fh_ColorWithHexRGB:(int)rgb
 {
-    return [UIColor fh_colorWithR:((rgb & 0xFF0000) >> 16)
+    return [UIColor fh_ColorWithR:((rgb & 0xFF0000) >> 16)
                                 G:((rgb & 0xFF00) >> 8)
                                 B:((rgb & 0xFF)) alpha:1];
 }

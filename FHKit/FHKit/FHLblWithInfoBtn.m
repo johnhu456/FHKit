@@ -9,6 +9,7 @@
 #import "FHLblWithInfoBtn.h"
 
 @interface FHLblWithInfoBtn ()
+
 typedef void(^InfoBtnOnClicked)();
 /**按钮Block*/
 @property (nonatomic, strong) InfoBtnOnClicked infoOnClikced;

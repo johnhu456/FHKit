@@ -8,18 +8,17 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-
-#import "UIView+Frame.h"
+#import <objc/runtime.h>
 
 #pragma mark - 字体部分
 
 #define FH_FONT_SYSTEM_WITH_SIZE(x) [UIFont systemFontOfSize:x]
-//#define FH_FONT_THIN_WITH_SIZE(x) [UIFont fontWithName:@"STHeitiSC-Light" size:x]
+#define FH_FONT_STHeitiSC_LIGHT(x) [UIFont fontWithName:@"STHeitiSC-Light" size:x]
 
 #pragma mark - 颜色部分
 
-#define FH_ColorWith(r,g,b,a) [UIColor colorWithRed:r/255.f green:g/255.f blue:b/255.f alpha:a]
-
+#define FH_COLOR_WITH(r,g,b,a) [UIColor colorWithRed:r/255.f green:g/255.f blue:b/255.f alpha:a]
+#define FH_HEX_COLOR(x)
 #pragma mark - WeakSelf
 
 #define WEAK_SELF __weak typeof(self) weakSelf = self 
@@ -66,5 +65,8 @@
 
 /**获取当前Window对象*/
 + (UIWindow *)getCurrentWindow;
+
+/**获取对象所有的Value值，打印输出*/
++ (void)getAllIvarValueWithObject:(id)obj;
 
 @end

@@ -11,12 +11,9 @@
 @interface UIColor (FHColorTool)
 
 /**RGB生成模式*/
-+ (instancetype)fh_colorWithR:(CGFloat)red G:(CGFloat)green B:(CGFloat)blue;
++ (instancetype)fh_ColorWithR:(CGFloat)red G:(CGFloat)green B:(CGFloat)blue alpha:(CGFloat)alpha;
 
-+ (instancetype)fh_colorWithR:(CGFloat)red G:(CGFloat)green B:(CGFloat)blue alpha:(CGFloat)alpha;
 /**HEX(16进制)*/
-+ (instancetype)fh_colorWithFFStyleRGB:(int)rgb;
-
-
++ (instancetype)fh_ColorWithHexRGB:(int)rgb;
 
 @end
