@@ -12,7 +12,7 @@
 
 typedef void(^InfoBtnOnClicked)();
 /**按钮Block*/
-@property (nonatomic, strong) InfoBtnOnClicked infoOnClikced;
+@property (nonatomic, weak) InfoBtnOnClicked infoOnClikced;
 @end
 
 @implementation FHLblWithInfoBtn
