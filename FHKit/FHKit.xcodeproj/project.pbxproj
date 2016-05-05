@@ -128,9 +128,9 @@
 		E098D6501C740410005CAB4E /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				E098D6561C7426B5005CAB4E /* Foundation+Log.m */,
 				E02ACA581C571AB200E8C049 /* FHTool.h */,
 				E02ACA591C571AB200E8C049 /* FHTool.m */,
+				E098D6561C7426B5005CAB4E /* Foundation+Log.m */,
 				E098D6521C741726005CAB4E /* FHOSVersionTool.h */,
 			);
 			name = Common;

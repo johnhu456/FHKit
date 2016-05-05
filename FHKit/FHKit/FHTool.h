@@ -19,9 +19,15 @@
 
 #define FH_COLOR_WITH(r,g,b,a) [UIColor colorWithRed:r/255.f green:g/255.f blue:b/255.f alpha:a]
 #define FH_HEX_COLOR(x)
-#pragma mark - WeakSelf
 
+#pragma mark - WeakSelf
 #define WEAK_SELF __weak typeof(self) weakSelf = self 
+
+#define WEAKSELF \
+autoreleasepool{} \
+__weak typeof(self) weakSelf = self
+
+#define WEAK_OBJ(o) autoreleasepool{} __weak typeof(o) o##Weak = o;
 
 #pragma mark - Debug
 
@@ -68,5 +74,9 @@
 
 /**获取对象所有的Value值，打印输出*/
 + (void)getAllIvarValueWithObject:(id)obj;
+
+#pragma makr - NSArraySort
+/**排列数组*/
++ (NSArray *)sortUsingDescriptorDictionary:(NSDictionary *)descriptorDic withArray:(NSArray *)sortArray;
 
 @end
