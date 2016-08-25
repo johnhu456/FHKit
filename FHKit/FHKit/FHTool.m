@@ -12,18 +12,20 @@
 
 + (UIWindow *)getCurrentWindow
 {
-    UIWindow *window = [UIApplication sharedApplication].windows[0];
+    UIWindow *window = [[UIApplication sharedApplication].windows lastObject];
     return window;
 }
 
-+ (CGFloat)getWindowWidth
++ (CGFloat)getScreenWidth
 {
-    return [[self class] getCurrentWindow].frame.size.width;
+    UIScreen *screen = [UIScreen mainScreen];
+    return screen.bounds.size.width;
 }
 
-+ (CGFloat)getWindowHeight
++ (CGFloat)getScreenHeight
 {
-    return [[self class] getCurrentWindow].frame.size.height;
+    UIScreen *screen = [UIScreen mainScreen];
+    return screen.bounds.size.height;
 }
 
 + (void)getAllIvarValueWithObject:(id)obj

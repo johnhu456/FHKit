@@ -26,7 +26,7 @@
     if (font) {
         resultButton.titleLabel.font = font;
     }
-    CGSize titleSize = FH_TEXTSIZE(resultButton.titleLabel.text, resultButton.titleLabel.font);
+    CGSize titleSize = FHGetTextSize(resultButton.titleLabel.text, resultButton.titleLabel.font);
     resultButton.frame = (CGRect){CGPointZero, titleSize};
     
     return resultButton;

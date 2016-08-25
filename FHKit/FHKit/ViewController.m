@@ -22,7 +22,7 @@
     [super viewDidLoad];
     UIView *colorView = [[UIView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
     [self.view addSubview:colorView];
-    colorView.backgroundColor = [UIColor fh_colorWithFFStyleRGB:0x000000];
+    colorView.backgroundColor = FHColorWithHexRGB(0x000000);
 
     
     FHLblWithInfoBtn *infoBtn = [[FHLblWithInfoBtn alloc] initWithFrame:CGRectMake(20, 20, 100, 20) title:@"sdafs" image:[UIImage imageNamed:@"calculate_img_chart_hydt"] handler:^{
