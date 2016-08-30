@@ -49,6 +49,7 @@
             newDescriptor = [NSSortDescriptor sortDescriptorWithKey:key ascending:[descriptorDic[key] boolValue]];
         }
         [descriptorArray addObject:newDescriptor];
+        
     }
     return [sortArray sortedArrayUsingDescriptors:[descriptorArray copy]];
 }

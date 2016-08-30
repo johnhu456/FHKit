@@ -8,6 +8,7 @@
 
 #import "UIButton+FHExtension.h"
 #import "FHTool.h"
+#import "FHMarco.h"
 
 @implementation UIButton (Extension)
 
@@ -27,6 +28,7 @@
         resultButton.titleLabel.font = font;
     }
     CGSize titleSize = FHGetTextSize(resultButton.titleLabel.text, resultButton.titleLabel.font);
+
     resultButton.frame = (CGRect){CGPointZero, titleSize};
     
     return resultButton;

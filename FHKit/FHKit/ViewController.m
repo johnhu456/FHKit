@@ -8,10 +8,9 @@
 
 #import "ViewController.h"
 #import "FHTool.h"
-#import "FHOSVersionTool.h"
-#import "UIColor+FHColorTool.h"
 #import "FHLblWithInfoBtn.h"
 #import <stdarg.h>
+
 @interface ViewController ()
 
 @end
@@ -33,7 +32,6 @@
     
     UILabel *label =[[ UILabel alloc] init];
     label.textAlignment = FHTextAlignmentCenter;
-    IF_IOS7_OR_GREATER(NSLog(@"HAHAHA");)
 }
 
 - (void)didReceiveMemoryWarning {
