@@ -18,6 +18,7 @@
 		E098D6571C7426B5005CAB4E /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = E098D6561C7426B5005CAB4E /* Foundation+Log.m */; };
 		E09C3FA21D6ECFCF004AD47A /* UIImage+FHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E09C3FA11D6ECFCF004AD47A /* UIImage+FHExtension.m */; };
 		E09C3FA51D6ED08B004AD47A /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = E09C3FA41D6ED08B004AD47A /* UIView+Frame.m */; };
+		E0C9E8A51D810DBF00EDAC51 /* NSDate+FHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C9E8A41D810DBF00EDAC51 /* NSDate+FHExtension.m */; };
 		E0D4C0F01C337325008AD8B6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E0D4C0EF1C337325008AD8B6 /* main.m */; };
 		E0D4C0F31C337325008AD8B6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E0D4C0F21C337325008AD8B6 /* AppDelegate.m */; };
 		E0D4C0F61C337325008AD8B6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0D4C0F51C337325008AD8B6 /* ViewController.m */; };
@@ -67,6 +68,8 @@
 		E09C3FA11D6ECFCF004AD47A /* UIImage+FHExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FHExtension.m"; sourceTree = "<group>"; };
 		E09C3FA31D6ED08B004AD47A /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Frame.h"; path = "../../../../工具库/布局相关/UIView+Frame.h"; sourceTree = "<group>"; };
 		E09C3FA41D6ED08B004AD47A /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Frame.m"; path = "../../../../工具库/布局相关/UIView+Frame.m"; sourceTree = "<group>"; };
+		E0C9E8A31D810DBF00EDAC51 /* NSDate+FHExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+FHExtension.h"; sourceTree = "<group>"; };
+		E0C9E8A41D810DBF00EDAC51 /* NSDate+FHExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+FHExtension.m"; sourceTree = "<group>"; };
 		E0D4C0EB1C337324008AD8B6 /* FHKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FHKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0D4C0EF1C337325008AD8B6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E0D4C0F11C337325008AD8B6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -157,8 +160,26 @@
 		E098D6511C740423005CAB4E /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				E0C9E8A71D810DF300EDAC51 /* UIKit */,
+				E0C9E8A61D810DD600EDAC51 /* Foundation */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
+		E0C9E8A61D810DD600EDAC51 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				E0C9E8A31D810DBF00EDAC51 /* NSDate+FHExtension.h */,
+				E0C9E8A41D810DBF00EDAC51 /* NSDate+FHExtension.m */,
 				E06BAF201D75666C00903A1A /* NSDictionary+FHExtension.h */,
 				E06BAF211D75666C00903A1A /* NSDictionary+FHExtension.m */,
+			);
+			name = Foundation;
+			sourceTree = "<group>";
+		};
+		E0C9E8A71D810DF300EDAC51 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
 				E098D6531C741F35005CAB4E /* UIButton+FHExtension.h */,
 				E098D6541C741F35005CAB4E /* UIButton+FHExtension.m */,
 				E09C3FA01D6ECFCF004AD47A /* UIImage+FHExtension.h */,
@@ -166,7 +187,7 @@
 				E09C3FA31D6ED08B004AD47A /* UIView+Frame.h */,
 				E09C3FA41D6ED08B004AD47A /* UIView+Frame.m */,
 			);
-			name = Category;
+			name = UIKit;
 			sourceTree = "<group>";
 		};
 		E0D4C0E21C337324008AD8B6 = {
@@ -435,6 +456,7 @@
 				E0D4C0F61C337325008AD8B6 /* ViewController.m in Sources */,
 				E098D6571C7426B5005CAB4E /* Foundation+Log.m in Sources */,
 				E06BAF221D75666C00903A1A /* NSDictionary+FHExtension.m in Sources */,
+				E0C9E8A51D810DBF00EDAC51 /* NSDate+FHExtension.m in Sources */,
 				E0D4C0F31C337325008AD8B6 /* AppDelegate.m in Sources */,
 				E06BAF1F1D73D83D00903A1A /* FHDESOperator.m in Sources */,
 				E0D4C0F01C337325008AD8B6 /* main.m in Sources */,
