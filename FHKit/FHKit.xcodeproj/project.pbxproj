@@ -11,6 +11,7 @@
 		E02ACA5A1C571AB200E8C049 /* FHTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E02ACA591C571AB200E8C049 /* FHTool.m */; };
 		E02ACA5D1C571AEC00E8C049 /* FHTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = E02ACA5C1C571AEC00E8C049 /* FHTextView.m */; };
 		E02C97D61D83ADE7003E2810 /* NSURL+FHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E02C97D51D83ADE7003E2810 /* NSURL+FHExtension.m */; };
+		E02C97DF1D84039F003E2810 /* UIFont+FHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E02C97DE1D84039F003E2810 /* UIFont+FHExtension.m */; };
 		E06498491CB36E1000152045 /* FHAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = E06498481CB36E1000152045 /* FHAlertController.m */; };
 		E06BAF1F1D73D83D00903A1A /* FHDESOperator.m in Sources */ = {isa = PBXBuildFile; fileRef = E06BAF1E1D73D83D00903A1A /* FHDESOperator.m */; };
 		E06BAF221D75666C00903A1A /* NSDictionary+FHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E06BAF211D75666C00903A1A /* NSDictionary+FHExtension.m */; };
@@ -18,7 +19,7 @@
 		E098D6551C741F35005CAB4E /* UIButton+FHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E098D6541C741F35005CAB4E /* UIButton+FHExtension.m */; };
 		E098D6571C7426B5005CAB4E /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = E098D6561C7426B5005CAB4E /* Foundation+Log.m */; };
 		E09C3FA21D6ECFCF004AD47A /* UIImage+FHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E09C3FA11D6ECFCF004AD47A /* UIImage+FHExtension.m */; };
-		E09C3FA51D6ED08B004AD47A /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = E09C3FA41D6ED08B004AD47A /* UIView+Frame.m */; };
+		E09C3FA51D6ED08B004AD47A /* UIView+FHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E09C3FA41D6ED08B004AD47A /* UIView+FHExtension.m */; };
 		E0C9E8A51D810DBF00EDAC51 /* NSDate+FHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C9E8A41D810DBF00EDAC51 /* NSDate+FHExtension.m */; };
 		E0D4C0F01C337325008AD8B6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E0D4C0EF1C337325008AD8B6 /* main.m */; };
 		E0D4C0F31C337325008AD8B6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E0D4C0F21C337325008AD8B6 /* AppDelegate.m */; };
@@ -56,6 +57,8 @@
 		E02ACA5C1C571AEC00E8C049 /* FHTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHTextView.m; sourceTree = "<group>"; };
 		E02C97D41D83ADE7003E2810 /* NSURL+FHExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+FHExtension.h"; sourceTree = "<group>"; };
 		E02C97D51D83ADE7003E2810 /* NSURL+FHExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+FHExtension.m"; sourceTree = "<group>"; };
+		E02C97DD1D84039F003E2810 /* UIFont+FHExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+FHExtension.h"; sourceTree = "<group>"; };
+		E02C97DE1D84039F003E2810 /* UIFont+FHExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+FHExtension.m"; sourceTree = "<group>"; };
 		E06498471CB36E1000152045 /* FHAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHAlertController.h; sourceTree = "<group>"; };
 		E06498481CB36E1000152045 /* FHAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHAlertController.m; sourceTree = "<group>"; };
 		E06BAF1D1D73D83D00903A1A /* FHDESOperator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHDESOperator.h; sourceTree = "<group>"; };
@@ -69,8 +72,8 @@
 		E098D6561C7426B5005CAB4E /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
 		E09C3FA01D6ECFCF004AD47A /* UIImage+FHExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FHExtension.h"; sourceTree = "<group>"; };
 		E09C3FA11D6ECFCF004AD47A /* UIImage+FHExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FHExtension.m"; sourceTree = "<group>"; };
-		E09C3FA31D6ED08B004AD47A /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Frame.h"; path = "../../../../工具库/布局相关/UIView+Frame.h"; sourceTree = "<group>"; };
-		E09C3FA41D6ED08B004AD47A /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Frame.m"; path = "../../../../工具库/布局相关/UIView+Frame.m"; sourceTree = "<group>"; };
+		E09C3FA31D6ED08B004AD47A /* UIView+FHExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+FHExtension.h"; path = "../../../../工具库/布局相关/UIView+FHExtension.h"; sourceTree = "<group>"; };
+		E09C3FA41D6ED08B004AD47A /* UIView+FHExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+FHExtension.m"; path = "../../../../工具库/布局相关/UIView+FHExtension.m"; sourceTree = "<group>"; };
 		E0C9E8A31D810DBF00EDAC51 /* NSDate+FHExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+FHExtension.h"; sourceTree = "<group>"; };
 		E0C9E8A41D810DBF00EDAC51 /* NSDate+FHExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+FHExtension.m"; sourceTree = "<group>"; };
 		E0D4C0EB1C337324008AD8B6 /* FHKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FHKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -189,8 +192,10 @@
 				E098D6541C741F35005CAB4E /* UIButton+FHExtension.m */,
 				E09C3FA01D6ECFCF004AD47A /* UIImage+FHExtension.h */,
 				E09C3FA11D6ECFCF004AD47A /* UIImage+FHExtension.m */,
-				E09C3FA31D6ED08B004AD47A /* UIView+Frame.h */,
-				E09C3FA41D6ED08B004AD47A /* UIView+Frame.m */,
+				E02C97DD1D84039F003E2810 /* UIFont+FHExtension.h */,
+				E02C97DE1D84039F003E2810 /* UIFont+FHExtension.m */,
+				E09C3FA31D6ED08B004AD47A /* UIView+FHExtension.h */,
+				E09C3FA41D6ED08B004AD47A /* UIView+FHExtension.m */,
 			);
 			name = UIKit;
 			sourceTree = "<group>";
@@ -463,11 +468,12 @@
 				E098D6571C7426B5005CAB4E /* Foundation+Log.m in Sources */,
 				E06BAF221D75666C00903A1A /* NSDictionary+FHExtension.m in Sources */,
 				E0C9E8A51D810DBF00EDAC51 /* NSDate+FHExtension.m in Sources */,
+				E02C97DF1D84039F003E2810 /* UIFont+FHExtension.m in Sources */,
 				E0D4C0F31C337325008AD8B6 /* AppDelegate.m in Sources */,
 				E06BAF1F1D73D83D00903A1A /* FHDESOperator.m in Sources */,
 				E0D4C0F01C337325008AD8B6 /* main.m in Sources */,
 				E02ACA5A1C571AB200E8C049 /* FHTool.m in Sources */,
-				E09C3FA51D6ED08B004AD47A /* UIView+Frame.m in Sources */,
+				E09C3FA51D6ED08B004AD47A /* UIView+FHExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
