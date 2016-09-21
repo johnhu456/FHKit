@@ -2,13 +2,13 @@
 //  UIView+Frame.m
 //  与乐分享
 //
-//  Created by 张文军 on 15/8/14.
+//  Created by MADAO on 15/8/14.
 //  Copyright (c) 2015年 hare. All rights reserved.
 //
 
-#import "UIView+Frame.h"
+#import "UIView+FHExtension.h"
 
-@implementation UIView (Frame)
+@implementation UIView (FHExtension)
 
 - (void)setX:(CGFloat)x{
     

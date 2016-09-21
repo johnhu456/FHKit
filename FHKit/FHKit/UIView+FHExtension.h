@@ -2,13 +2,13 @@
 //  UIView+Frame.h
 //  与乐分享
 //
-//  Created by 张文军 on 15/8/14.
+//  Created by MADAO on 15/8/14.
 //  Copyright (c) 2015年 hare. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface UIView (Frame)
+@interface UIView (FHExtension)
 
 // frame.origin.x
 @property (nonatomic, assign) CGFloat   x;
