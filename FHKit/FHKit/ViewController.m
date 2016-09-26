@@ -9,13 +9,21 @@
 #import "ViewController.h"
 #import "FHTool.h"
 #import "FHLblWithInfoBtn.h"
+#import "NSDate+FHExtension.h"
 #import <stdarg.h>
 
 @interface ViewController ()
 
+@property (nonatomic, strong) NSArray *characterArray;
 @end
 
 @implementation ViewController
+
+- (NSArray *)characterArray
+{
+    return @[@"%a",@"%A",@"%b",@"%B",@"%c",@"%d",@"%H",@"%I",@"%j",@"%m",@"%M",@"%p",@"%S",@"%u",@"%w",@"%x",@"%X",@"%y",@"%Y",@"%Z"];
+
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -32,6 +40,17 @@
     
     UILabel *label =[[ UILabel alloc] init];
     label.textAlignment = FHTextAlignmentCenter;
+    
+    NSDate *date = [NSDate date];
+    for (NSString *form in self.characterArray) {
+        NSString *str = [date strfTimeStringWithFormat:form];
+        NSLog(@"%@",str);
+    }
+    
+    NSDate *date2 = [NSDate date];
+    NSString *str1 = [date2 strfTimeStringWithFormat:@"%Y-%m-%dT%H:%M:%S%z"];
+    NSDate *date3 = [NSDate strpDateWithFormatString:str1 inFormat:@"%Y-%m-%dT%H:%M:%S%z"];
+    NSLog(@"%@",date3);
 }
 
 - (void)didReceiveMemoryWarning {
