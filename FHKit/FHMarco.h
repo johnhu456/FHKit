@@ -104,7 +104,7 @@
 #pragma mark - Log
 
 #ifndef __OPTIMIZE__
-# define MYLog(format,...) NSLog((@ "%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+# define MYLog(format,...) NSLog((@ "%s [Line %d] " format), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
 #else
 # define MYLog(...)
 #endif
