@@ -10,6 +10,16 @@
 
 @implementation NSDictionary (FHExtension)
 
++ (NSDictionary *)fh_dictionaryWithData:(NSData *)data;
+{
+    NSError *error;
+    NSDictionary *result = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+    if (!error) {
+        return result;
+    }
+    return nil;
+}
+
 @end
 
 @implementation NSMutableDictionary (FHExtension)

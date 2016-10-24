@@ -9,7 +9,11 @@
 #import <Foundation/Foundation.h>
 
 @interface NSDictionary (FHExtension)
-
+/**
+ Use NSJSONReadingMutableContainers option to convrt a NSData object to NSDictionary
+ @return the result NSDictionary
+ */
++ (NSDictionary *)fh_dictionaryWithData:(NSData *)data;
 
 @end
 
