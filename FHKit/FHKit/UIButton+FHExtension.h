@@ -10,38 +10,10 @@
 
 @interface UIButton (Extension)
 
-+ (UIButton *)customButtonWithTitle:(NSString *)title;
-+ (UIButton *)customButtonWithTitle:(NSString *)title font:(UIFont *)font;
-
-+ (UIButton *)customButtonWithDefaultImage:(UIImage *)defaultImage;
-
-+ (UIButton *)customButtonWithDefaultImage:(UIImage *)defaultImage
-                          highlightedImage:(UIImage *)highlightedImage;
-
-+ (UIButton *)customButtonWithDefaultImage:(UIImage *)defaultImage
-                          highlightedImage:(UIImage *)highlightedImage
-                             selectedImage:(UIImage *)selectedImage;
-
-+ (UIButton *)customButtonWithDefaultImage:(UIImage *)defaultImage
-                          highlightedImage:(UIImage *)highlightedImage
-                             selectedImage:(UIImage *)selectedImage
-                             disabledImage:(UIImage *)disabledImage;
-
-+ (UIButton *)customButtonWithTitle:(NSString *)title
-             defaultBackgroundImage:(UIImage *)defaultImage;
-
-+ (UIButton *)customButtonWithTitle:(NSString *)title
-             defaultBackgroundImage:(UIImage *)defaultImage
-         highlightedBackgroundImage:(UIImage *)highlightedImage;
-
-+ (UIButton *)customButtonWithTitle:(NSString *)title
-             defaultBackgroundImage:(UIImage *)defaultImage
-            selectedBackgroundImage:(UIImage *)selectedImage;
-
-+ (UIButton *)customButtonWithTitle:(NSString *)title
-             defaultBackgroundImage:(UIImage *)defaultImage
-         highlightedBackgroundImage:(UIImage *)highlightedImage
-            selectedBackgroundImage:(UIImage *)selectedImage
-            disabledBackgroundImage:(UIImage *)disabledImage;
-
+/**
+ Set button's background color for different state
+ May cause conflict with method 'setBackgroundImage:(UIImage *)image forState:(UIControlState)state'
+ */
+- (void)fh_setBackgroundColor:(UIColor *)backgroundColor
+                     forState:(UIControlState)state;
 @end
