@@ -13,24 +13,6 @@
 #import <objc/runtime.h>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*==========================================*/
 #pragma mark - Font
 
@@ -99,6 +81,10 @@
 #pragma mark - Image
 
 #define ImageInName(name) [UIImage imageNamed:name]
+
+/*==========================================*/
+#pragma mark - Layout
+#define HEIGHT_1PX (1.f/[UIScreen mainScreen].scale)
 
 /*==========================================*/
 #pragma mark - Class
