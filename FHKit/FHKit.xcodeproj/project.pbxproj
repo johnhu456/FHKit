@@ -19,8 +19,8 @@
 		E098D64E1C7303D4005CAB4E /* FHLblWithInfoBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = E098D64D1C7303D4005CAB4E /* FHLblWithInfoBtn.m */; };
 		E098D6551C741F35005CAB4E /* UIButton+FHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E098D6541C741F35005CAB4E /* UIButton+FHExtension.m */; };
 		E098D6571C7426B5005CAB4E /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = E098D6561C7426B5005CAB4E /* Foundation+Log.m */; };
-		E09C3FA21D6ECFCF004AD47A /* UIImage+FHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E09C3FA11D6ECFCF004AD47A /* UIImage+FHExtension.m */; };
 		E0C9E8A51D810DBF00EDAC51 /* NSDate+FHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C9E8A41D810DBF00EDAC51 /* NSDate+FHExtension.m */; };
+		E0CF371F1DDBF2FE002F9746 /* UIImage+FHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E0CF371E1DDBF2FE002F9746 /* UIImage+FHExtension.m */; };
 		E0D4C0F01C337325008AD8B6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E0D4C0EF1C337325008AD8B6 /* main.m */; };
 		E0D4C0F31C337325008AD8B6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E0D4C0F21C337325008AD8B6 /* AppDelegate.m */; };
 		E0D4C0F61C337325008AD8B6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0D4C0F51C337325008AD8B6 /* ViewController.m */; };
@@ -72,10 +72,10 @@
 		E098D6531C741F35005CAB4E /* UIButton+FHExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+FHExtension.h"; sourceTree = "<group>"; };
 		E098D6541C741F35005CAB4E /* UIButton+FHExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+FHExtension.m"; sourceTree = "<group>"; };
 		E098D6561C7426B5005CAB4E /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
-		E09C3FA01D6ECFCF004AD47A /* UIImage+FHExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FHExtension.h"; sourceTree = "<group>"; };
-		E09C3FA11D6ECFCF004AD47A /* UIImage+FHExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FHExtension.m"; sourceTree = "<group>"; };
 		E0C9E8A31D810DBF00EDAC51 /* NSDate+FHExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+FHExtension.h"; sourceTree = "<group>"; };
 		E0C9E8A41D810DBF00EDAC51 /* NSDate+FHExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+FHExtension.m"; sourceTree = "<group>"; };
+		E0CF371D1DDBF2FE002F9746 /* UIImage+FHExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FHExtension.h"; sourceTree = "<group>"; };
+		E0CF371E1DDBF2FE002F9746 /* UIImage+FHExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FHExtension.m"; sourceTree = "<group>"; };
 		E0D4C0EB1C337324008AD8B6 /* FHKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FHKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0D4C0EF1C337325008AD8B6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E0D4C0F11C337325008AD8B6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -190,8 +190,8 @@
 			children = (
 				E098D6531C741F35005CAB4E /* UIButton+FHExtension.h */,
 				E098D6541C741F35005CAB4E /* UIButton+FHExtension.m */,
-				E09C3FA01D6ECFCF004AD47A /* UIImage+FHExtension.h */,
-				E09C3FA11D6ECFCF004AD47A /* UIImage+FHExtension.m */,
+				E0CF371D1DDBF2FE002F9746 /* UIImage+FHExtension.h */,
+				E0CF371E1DDBF2FE002F9746 /* UIImage+FHExtension.m */,
 				E02C97DD1D84039F003E2810 /* UIFont+FHExtension.h */,
 				E02C97DE1D84039F003E2810 /* UIFont+FHExtension.m */,
 				E06612011D926B400090428B /* UIView+FHExtension.h */,
@@ -460,13 +460,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E098D6551C741F35005CAB4E /* UIButton+FHExtension.m in Sources */,
-				E09C3FA21D6ECFCF004AD47A /* UIImage+FHExtension.m in Sources */,
 				E02ACA5D1C571AEC00E8C049 /* FHTextView.m in Sources */,
 				E098D64E1C7303D4005CAB4E /* FHLblWithInfoBtn.m in Sources */,
 				E06498491CB36E1000152045 /* FHAlertController.m in Sources */,
 				E0D4C0F61C337325008AD8B6 /* ViewController.m in Sources */,
 				E02C97D61D83ADE7003E2810 /* NSURL+FHExtension.m in Sources */,
 				E098D6571C7426B5005CAB4E /* Foundation+Log.m in Sources */,
+				E0CF371F1DDBF2FE002F9746 /* UIImage+FHExtension.m in Sources */,
 				E06BAF221D75666C00903A1A /* NSDictionary+FHExtension.m in Sources */,
 				E0C9E8A51D810DBF00EDAC51 /* NSDate+FHExtension.m in Sources */,
 				E02C97DF1D84039F003E2810 /* UIFont+FHExtension.m in Sources */,

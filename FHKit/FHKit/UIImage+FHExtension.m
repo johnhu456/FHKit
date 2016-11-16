@@ -49,7 +49,7 @@
     return scaledImage;
 }
 
-- (UIImage *)imageForSnapShotView:(UIView *)view {
++ (UIImage *)imageForSnapShotView:(UIView *)view {
     UIGraphicsBeginImageContextWithOptions(view.frame.size, NO, 0.0);
     //获取图像
     [view.layer renderInContext:UIGraphicsGetCurrentContext()];
@@ -57,10 +57,10 @@
     return image;
 }
 
-- (UIImage *)coreBlurImage:(UIImage *)image withBlurLevel:(CGFloat)blur
+- (UIImage *)coreBlurWithBlurLevel:(CGFloat)blur
 {
     CIContext *context = [CIContext contextWithOptions:nil];
-    CIImage *inputImage= [CIImage imageWithCGImage:image.CGImage];
+    CIImage *inputImage= [CIImage imageWithCGImage:self.CGImage];
     //设置filter
     CIFilter *filter = [CIFilter filterWithName:@"CIGaussianBlur"];
     [filter setValue:inputImage forKey:kCIInputImageKey]; [filter setValue:@(blur) forKey: @"inputRadius"];
