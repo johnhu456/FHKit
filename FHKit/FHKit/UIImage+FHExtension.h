@@ -28,4 +28,22 @@
  */
 - (UIImage *)scaleToSize:(CGSize)size;
 
+/**
+ Get screenshots of the view
+
+ @param The UIView object to take a screenshot
+
+ @return The screenshot,its size is same as the view's
+ */
+- (UIImage *)imageForSnapShotView:(UIView *)view;
+
+/**
+ Use CoreImage to blur with the image
+
+ @param image The UIImage object need to be blured
+ @param blur  Blur Level
+
+ @return the blured image
+ */
+- (UIImage *)coreBlurImage:(UIImage *)image withBlurLevel:(CGFloat)blur;
 @end

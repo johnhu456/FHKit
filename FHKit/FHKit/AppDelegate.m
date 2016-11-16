@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import <CoreText/CoreText.h>
 #import "UIFont+FHExtension.h"
+#import "NSDictionary+FHExtension.h"
 @interface AppDelegate ()
 
 @end
@@ -18,12 +19,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
-    [UIFont searchOrDownloadFontInName:@"STHeitiSC-Light" size:14 taskBlock:^(UIFont *font, CGFloat progress) {
-        NSLog(@"font:%@",font);
-        NSLog(@"progress:%.2f",progress);
-    }];
-    
+
     return YES;
 }
 
