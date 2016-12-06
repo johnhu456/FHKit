@@ -9,6 +9,16 @@
 #import <Foundation/Foundation.h>
 
 @interface NSDate (FHExtension)
+#pragma mark - Normal 
+
+/**
+ Get timestamp using [NSDate date]
+
+ @return long type timestamp
+ */
+- (long)fh_getTimeStamp;
+
+#pragma mark - Convert With String
 /**
  *  return A string value representing the date;
  *
@@ -17,7 +27,7 @@
  *
  *  @return The result string representing formatted date.
  */
-- (NSString *)stringWithFormat:(NSString *)format;
+- (NSString *)fh_stringWithFormat:(NSString *)format;
 /**
  *  return Date value converted from the stirng
  *
@@ -27,7 +37,7 @@
  *
  *  @return The result date converted from the stirng
  */
-+ (NSDate *)dateWithString:(NSString *)string andFormat:(NSString *)format;
++ (NSDate *)fh_dateWithString:(NSString *)string andFormat:(NSString *)format;
 
 /*-------------------------- Chart of conversion control characters in strp/strf way --------------------------*/
 /*  Year(specific)              : %Y                                                                           */
@@ -61,7 +71,7 @@
  *
  @return The result string representing formatted date.
  */
-- (NSString *)strfTimeStringWithFormat:(NSString *)format;
+- (NSString *)fh_strfTimeStringWithFormat:(NSString *)format;
 /**
  Same as the methd dateWithString: But use strptime function to covert string.
  if you seek for coverting quickly, this method is a good choice.
@@ -72,6 +82,6 @@
  
  @return The result date converted from the stirng
  */
-+ (NSDate *)strpDateWithFormatString:(NSString *)formatedString inFormat:(NSString *)format;
++ (NSDate *)fh_strpDateWithFormatString:(NSString *)formatedString inFormat:(NSString *)format;
 
 @end

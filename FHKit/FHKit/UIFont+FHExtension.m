@@ -11,7 +11,7 @@
 
 @implementation UIFont (FHExtension)
 
-+ (void)searchOrDownloadFontInName:(NSString *)fontName size:(CGFloat)fontSize taskBlock:(void(^)(UIFont *font, CGFloat progress))searchBlock
++ (void)fh_searchOrDownloadFontInName:(NSString *)fontName size:(CGFloat)fontSize taskBlock:(void(^)(UIFont *font, CGFloat progress))searchBlock
 {
     //Get A CoreFundation type Font array
     NSMutableDictionary *fontAttrs = [NSMutableDictionary dictionaryWithObjectsAndKeys:fontName, kCTFontNameAttribute, nil];

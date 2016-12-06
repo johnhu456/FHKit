@@ -13,12 +13,12 @@
 @implementation UIButton (Extension)
 
 - (void)fh_setBackgroundColor:(UIColor *)backgroundColor forState:(UIControlState)state {
-    [self setBackgroundImage:[self imageWithColor:backgroundColor] forState:state];
+    [self setBackgroundImage:[self fh_imageWithColor:backgroundColor] forState:state];
 }
 
 #pragma mark - Private Method
 //  颜色转换为背景图片
-- (UIImage *)imageWithColor:(UIColor *)color {
+- (UIImage *)fh_imageWithColor:(UIColor *)color {
     CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
     UIGraphicsBeginImageContext(rect.size);
     CGContextRef context = UIGraphicsGetCurrentContext();

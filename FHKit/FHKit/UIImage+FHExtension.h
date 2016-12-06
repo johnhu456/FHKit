@@ -17,7 +17,7 @@
  *
  *  @return The round image
  */
-- (UIImage *)cutToRoundImageWithRadius:(CGFloat)radius;
+- (UIImage *)fh_cutToRoundImageWithRadius:(CGFloat)radius;
 
 /**
  *  Resize the image to a specific size
@@ -26,7 +26,7 @@
  *
  *  @return The resized image
  */
-- (UIImage *)scaleToSize:(CGSize)size;
+- (UIImage *)fh_scaleToSize:(CGSize)size;
 
 /**
  Get screenshots of the view
@@ -35,7 +35,7 @@
 
  @return The screenshot,its size is same as the view's
  */
-+ (UIImage *)imageForSnapShotView:(UIView *)view;
++ (UIImage *)fh_imageForSnapShotView:(UIView *)view;
 
 /**
  Use CoreImage to blur with the image
@@ -44,5 +44,5 @@
 
  @return the blured image
  */
-- (UIImage *)coreBlurWithBlurLevel:(CGFloat)blur;
+- (UIImage *)fh_coreBlurWithBlurLevel:(CGFloat)blur;
 @end

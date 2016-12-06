@@ -17,6 +17,6 @@
  *  @param fontSize    Size of the font
  *  @param searchBlock A block returns the information of searching/downloading progress and the font you want.
  */
-+ (void)searchOrDownloadFontInName:(NSString *)fontName size:(CGFloat)fontSize taskBlock:(void(^)(UIFont *font, CGFloat progress))searchBlock;
++ (void)fh_searchOrDownloadFontInName:(NSString *)fontName size:(CGFloat)fontSize taskBlock:(void(^)(UIFont *font, CGFloat progress))searchBlock;
 
 @end

@@ -11,24 +11,28 @@
 
 @implementation NSDate (FHExtension)
 
-- (NSString *)stringWithFormat:(NSString *)format
-{
+#pragma mark - Normal
+- (long)fh_getTimeStamp {
+    return [[NSDate date] timeIntervalSince1970];
+}
+
+#pragma mark - Convert With String
+
+- (NSString *)fh_stringWithFormat:(NSString *)format {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:format];
     [dateFormatter setLocale:[NSLocale currentLocale]];
     return [dateFormatter stringFromDate:self];
 }
 
-+ (NSDate *)dateWithString:(NSString *)string andFormat:(NSString *)format
-{
++ (NSDate *)fh_dateWithString:(NSString *)string andFormat:(NSString *)format {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:format];
     [dateFormatter setLocale:[NSLocale currentLocale]];
     return [dateFormatter dateFromString:string];
 }
 
-- (NSString *)strfTimeStringWithFormat:(NSString *)format
-{
+- (NSString *)fh_strfTimeStringWithFormat:(NSString *)format {
     const char *aCstr = [format cStringUsingEncoding:NSNonLossyASCIIStringEncoding];
     struct tm time;
     char buffer[80];
@@ -39,8 +43,7 @@
     return [NSString stringWithCString:buffer encoding:NSNonLossyASCIIStringEncoding];
 }
 
-+ (NSDate *)strpDateWithFormatString:(NSString *)formatedString inFormat:(NSString *)format
-{
++ (NSDate *)fh_strpDateWithFormatString:(NSString *)formatedString inFormat:(NSString *)format {
     struct tm time;
     time_t timeInterval;
     

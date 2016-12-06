@@ -10,7 +10,7 @@
 
 @implementation UIImage (FHExtension)
 
-- (UIImage *)cutToRoundImageWithRadius:(CGFloat)radius
+- (UIImage *)fh_cutToRoundImageWithRadius:(CGFloat)radius
 {
     // 开启上下文
     UIGraphicsBeginImageContextWithOptions(self.size, NO, 0);
@@ -29,7 +29,7 @@
     return image;
 }
 
--(UIImage *)scaleToSize:(CGSize)size
+-(UIImage *)fh_scaleToSize:(CGSize)size
 {
     // 创建一个bitmap的context，并把它设置成为当前正在使用的context(非高清屏方法)
     //    UIGraphicsBeginImageContext(size);
@@ -49,7 +49,7 @@
     return scaledImage;
 }
 
-+ (UIImage *)imageForSnapShotView:(UIView *)view {
++ (UIImage *)fh_imageForSnapShotView:(UIView *)view {
     UIGraphicsBeginImageContextWithOptions(view.frame.size, NO, 0.0);
     //获取图像
     [view.layer renderInContext:UIGraphicsGetCurrentContext()];
@@ -57,7 +57,7 @@
     return image;
 }
 
-- (UIImage *)coreBlurWithBlurLevel:(CGFloat)blur
+- (UIImage *)fh_coreBlurWithBlurLevel:(CGFloat)blur
 {
     CIContext *context = [CIContext contextWithOptions:nil];
     CIImage *inputImage= [CIImage imageWithCGImage:self.CGImage];
