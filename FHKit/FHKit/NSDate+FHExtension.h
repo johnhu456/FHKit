@@ -16,7 +16,7 @@
 
  @return long type timestamp
  */
-- (long)fh_getTimeStamp;
++ (long)fh_getTimeStamp;
 
 #pragma mark - Convert With String
 /**

@@ -12,7 +12,7 @@
 @implementation NSDate (FHExtension)
 
 #pragma mark - Normal
-- (long)fh_getTimeStamp {
++ (long)fh_getTimeStamp {
     return [[NSDate date] timeIntervalSince1970];
 }
 
