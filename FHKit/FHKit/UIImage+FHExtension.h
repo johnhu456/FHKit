@@ -40,8 +40,8 @@
 /**
  Use CoreImage to blur with the image
  
- @param blur  Blur Level
-
+ @param blur  Blur level,more bigger,more blurred.
+ 
  @return the blured image
  */
 - (UIImage *)fh_coreBlurWithBlurLevel:(CGFloat)blur;
