@@ -9,7 +9,23 @@
 #import "UIImage+FHExtension.h"
 
 @implementation UIImage (FHExtension)
-
+- (UIImage *)fh_cutToRectCornerWithRect:(CGRect)rect Radius:(CGFloat)radius {
+    CGFloat scale = radius/rect.size.height;
+    // 开启上下文
+    UIGraphicsBeginImageContextWithOptions(self.size, NO, 0);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    // 绘制圆
+    UIBezierPath *outPath = [UIBezierPath bezierPathWithRoundedRect:(CGRect){CGPointZero,self.size} byRoundingCorners:UIRectCornerTopLeft|UIRectCornerBottomLeft|UIRectCornerTopRight|UIRectCornerBottomRight cornerRadii:CGSizeMake(self.size.height * scale, self.size.height * scale)];
+    CGContextAddPath(context, outPath.CGPath);
+    // 剪裁
+    CGContextClip(context);
+    
+    [self drawAtPoint:CGPointZero];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
+}
 - (UIImage *)fh_cutToRoundImageWithRadius:(CGFloat)radius
 {
     // 开启上下文

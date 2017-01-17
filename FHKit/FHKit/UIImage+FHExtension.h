@@ -11,6 +11,17 @@
 @interface UIImage (FHExtension)
 
 /**
+ *  Cut an image to a rect with round corner
+ *
+ *  @param rect The rect 
+ *
+ *  @param radius The corner's radius
+ *
+ *  @return The round image
+ */
+- (UIImage *)fh_cutToRectCornerWithRect:(CGRect)rect Radius:(CGFloat)radius;
+
+/**
  *  Cut an image to a round image
  *
  *  @param radius The round's radius
@@ -41,7 +52,7 @@
  Use CoreImage to blur with the image
  
  @param blur  Blur level,more bigger,more blurred.
- 
+
  @return the blured image
  */
 - (UIImage *)fh_coreBlurWithBlurLevel:(CGFloat)blur;
