@@ -17,6 +17,7 @@
 		E06612031D926B400090428B /* UIView+FHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E06612021D926B400090428B /* UIView+FHExtension.m */; };
 		E06BAF1F1D73D83D00903A1A /* FHDESOperator.m in Sources */ = {isa = PBXBuildFile; fileRef = E06BAF1E1D73D83D00903A1A /* FHDESOperator.m */; };
 		E06BAF221D75666C00903A1A /* NSDictionary+FHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E06BAF211D75666C00903A1A /* NSDictionary+FHExtension.m */; };
+		E08502341FE51937002A30F7 /* FHThreadWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = E08502331FE51937002A30F7 /* FHThreadWatcher.m */; };
 		E098D64E1C7303D4005CAB4E /* FHLblWithInfoBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = E098D64D1C7303D4005CAB4E /* FHLblWithInfoBtn.m */; };
 		E098D6551C741F35005CAB4E /* UIButton+FHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E098D6541C741F35005CAB4E /* UIButton+FHExtension.m */; };
 		E098D6571C7426B5005CAB4E /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = E098D6561C7426B5005CAB4E /* Foundation+Log.m */; };
@@ -70,6 +71,8 @@
 		E06BAF1E1D73D83D00903A1A /* FHDESOperator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHDESOperator.m; sourceTree = "<group>"; };
 		E06BAF201D75666C00903A1A /* NSDictionary+FHExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+FHExtension.h"; sourceTree = "<group>"; };
 		E06BAF211D75666C00903A1A /* NSDictionary+FHExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+FHExtension.m"; sourceTree = "<group>"; };
+		E08502321FE51937002A30F7 /* FHThreadWatcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FHThreadWatcher.h; path = Tools/FHThreadWatcher.h; sourceTree = "<group>"; };
+		E08502331FE51937002A30F7 /* FHThreadWatcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = FHThreadWatcher.m; path = Tools/FHThreadWatcher.m; sourceTree = "<group>"; };
 		E098D64C1C7303D4005CAB4E /* FHLblWithInfoBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHLblWithInfoBtn.h; sourceTree = "<group>"; };
 		E098D64D1C7303D4005CAB4E /* FHLblWithInfoBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHLblWithInfoBtn.m; sourceTree = "<group>"; };
 		E098D6531C741F35005CAB4E /* UIButton+FHExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+FHExtension.h"; sourceTree = "<group>"; };
@@ -143,6 +146,15 @@
 				E06BAF1E1D73D83D00903A1A /* FHDESOperator.m */,
 			);
 			name = Encrypt;
+			sourceTree = "<group>";
+		};
+		E08502311FE518EF002A30F7 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				E08502321FE51937002A30F7 /* FHThreadWatcher.h */,
+				E08502331FE51937002A30F7 /* FHThreadWatcher.m */,
+			);
+			name = Tools;
 			sourceTree = "<group>";
 		};
 		E098D64F1C74039F005CAB4E /* Widgets */ = {
@@ -231,6 +243,7 @@
 		E0D4C0ED1C337325008AD8B6 /* FHKit */ = {
 			isa = PBXGroup;
 			children = (
+				E08502311FE518EF002A30F7 /* Tools */,
 				E06BAF1C1D73D7F000903A1A /* Encrypt */,
 				E098D6501C740410005CAB4E /* Common */,
 				E098D64F1C74039F005CAB4E /* Widgets */,
@@ -483,6 +496,7 @@
 				E0D4C0F01C337325008AD8B6 /* main.m in Sources */,
 				E06612031D926B400090428B /* UIView+FHExtension.m in Sources */,
 				E02ACA5A1C571AB200E8C049 /* FHTool.m in Sources */,
+				E08502341FE51937002A30F7 /* FHThreadWatcher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
