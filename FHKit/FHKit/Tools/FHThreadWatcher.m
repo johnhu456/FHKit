@@ -7,14 +7,14 @@
 //
 
 #import "FHThreadWatcher.h"
+#import "BSBacktraceLogger.h"
 #import <signal.h>
 #import <pthread.h>
 #import <execinfo.h>
 static pthread_t mainThreadID;
-static NSString *const kMainThreadPingNotification = @"kMainThreadPingNotification";
-static NSString *const kMainThreadPongNotification = @"kMainThreadPongNotification";
 
 static void threadKilledHandler(int sig) {
+    //This code only works when set 'pro hand -p true -s false SIGUSR1' in lldb
     NSLog(@"Ops, something stucked on main thread:\n========================");
     for (NSString *callStack in [NSThread callStackSymbols]) {
         NSLog(@"%@",callStack);
@@ -30,8 +30,11 @@ static void threadKiller() {
 
 @property (nonatomic, strong) dispatch_source_t pingTimer;
 @property (nonatomic, strong) dispatch_source_t pongTimer;
+@property (nonatomic, strong) NSNumber *startTime;
+@property (nonatomic, strong) NSNumber *endTime;
 
-@property (nonatomic, assign) void(^warningHandler)(NSArray <NSString *> *);
+@property (nonatomic, copy) void(^runLoopCallBack)(CFRunLoopObserverRef observer, CFRunLoopActivity activity);
+@property (nonatomic, copy) void(^warningHandler)(NSString *);
 
 @end
 
@@ -51,96 +54,66 @@ static void threadKiller() {
 
 - (instancetype)init {
     if (self = [super init]) {
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleReceivedPingNotification:) name:kMainThreadPingNotification object:nil];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleReceivedPongNotification:) name:kMainThreadPongNotification object:nil];
+        
     }
     return self;
 }
 
 #pragma mark - PublicMethod
-- (void)startWatchWithWarningHandler:(void (^)(NSArray<NSString *> *))handler {
+- (void)startWatchWithWarningHandler:(void (^)(NSString *))handler {
     self.warningHandler = handler;
-    //Must called from a main thread
-    NSAssert([NSThread currentThread].isMainThread, @"startWatch must called from a main thread");
-    
+    [self setupRunloopObserver];
+}
+
+#pragma mark - PrivateMethod
+
+- (void)setupRunloopObserver
+{
     //Register a signal handler
-    signal(SIGUSR1, threadKilledHandler);
-    
-    mainThreadID = pthread_self();
-    [self startPing];
-}
-
-#pragma mark - PublicMethod
-- (void)startPing {
-    self.pingTimer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0));
-    dispatch_source_set_timer(self.pingTimer, dispatch_walltime(NULL, self.watchInterval * NSEC_PER_SEC), self.watchInterval * NSEC_PER_SEC, self.warningInterval * NSEC_PER_SEC);
-    dispatch_source_set_event_handler(self.pingTimer, ^{
-        [self startPong];
-    });
-    dispatch_resume(self.pingTimer);
-}
-
-- (void)startPong {
-    self.pongTimer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0));
-    dispatch_source_set_timer(self.pongTimer, dispatch_walltime(NULL, self.warningInterval * NSEC_PER_SEC), self.warningInterval * NSEC_PER_SEC, self.warningInterval * NSEC_PER_SEC);
-    dispatch_source_set_event_handler(self.pongTimer, ^{
-        [self handleMainThreadTimeOut];
-    });
-    dispatch_resume(self.pongTimer);
-    
     dispatch_async(dispatch_get_main_queue(), ^{
-        [[NSNotificationCenter defaultCenter] postNotificationName:kMainThreadPingNotification object:nil];
+        mainThreadID = pthread_self();
+        signal(SIGUSR1, threadKilledHandler);
     });
-}
 
-- (void)handleMainThreadTimeOut {
-    if (self.warningHandler) {
-//        NSLog(@"%@",[NSThread callStackSymbols]);
-//        NSLog(@"%@",[NSThread callStackSymbols]);
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            int j, nptrs;
-//#define SIZE 100
-//            void *buffer[100];
-//            char **strings;
-//
-//            nptrs = backtrace(buffer, SIZE);
-//            printf("backtrace() returned %d addresses\n", nptrs);
-//
-//            /* The call backtrace_symbols_fd(buffer, nptrs, STDOUT_FILENO)
-//             would produce similar output to the following: */
-//
-//            strings = backtrace_symbols(buffer, nptrs);
-//            if (strings == NULL) {
-//                perror("backtrace_symbols");
-//                exit(EXIT_FAILURE);
-//            }
-//
-//            for (j = 0; j < nptrs; j++)
-//                printf("%s\n", strings[j]);
-//
-//            free(strings);
-//        });
-        
-//        NSString *stirng = [[NSString alloc] initWithUTF8String:*backtrace_symbols(xaddr, 30)];
-//        NSLog(@"%@\n=================",stirng);
-//        self.warningHandler([NSThread callStackSymbols]);
-    }
-    threadKiller();
-}
-
-#pragma mark - Notification
-
-- (void)handleReceivedPingNotification:(NSNotification *)notification {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [[NSNotificationCenter defaultCenter] postNotificationName:kMainThreadPongNotification object:nil];
+    //Add runloop observer
+    __weak typeof(self) weakSelf = self;
+    self.runLoopCallBack = ^(CFRunLoopObserverRef observer, CFRunLoopActivity activity) {
+        switch (activity) {
+            case kCFRunLoopBeforeWaiting:
+                NSLog(@"beforeWaiting");
+                weakSelf.endTime = @([[NSDate date] timeIntervalSinceReferenceDate]);
+                break;
+            case kCFRunLoopAfterWaiting:
+                weakSelf.endTime = nil;
+                weakSelf.startTime = @([[NSDate date] timeIntervalSinceReferenceDate]);
+                NSLog(@"afterWaiting");
+                break;
+            default:
+                break;
+        }
+    };
+    CFRunLoopRef runLoop = CFRunLoopGetMain();
+    CFRunLoopObserverRef observer = CFRunLoopObserverCreateWithHandler(kCFAllocatorDefault, kCFRunLoopAllActivities, YES, 0, self.runLoopCallBack);
+    CFRunLoopAddObserver(runLoop, observer, kCFRunLoopCommonModes);
+    
+    //Create detecter
+    dispatch_source_t timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, dispatch_get_global_queue(0, 0));
+    dispatch_source_set_timer(timer, DISPATCH_TIME_NOW, self.watchInterval * NSEC_PER_SEC, self.warningInterval * NSEC_PER_SEC);
+    dispatch_source_set_event_handler(timer, ^{
+        if (self.startTime == nil)
+            return;
+        if (self.endTime != nil)
+            return;
+        if ([[NSDate date] timeIntervalSinceReferenceDate] - weakSelf.startTime.doubleValue > 16/1000.f)
+        {
+            if (self.warningHandler) {
+                self.warningHandler([BSBacktraceLogger bs_backtraceOfMainThread]);
+            }
+                threadKiller();
+        }
     });
-}
-
-- (void)handleReceivedPongNotification:(NSNotification *)notification {
-    if (self.pongTimer) {
-        dispatch_source_cancel(self.pongTimer);
-        self.pongTimer = nil;
-    }
+    dispatch_resume(timer);
+    self.pingTimer = timer;
 }
 
 @end

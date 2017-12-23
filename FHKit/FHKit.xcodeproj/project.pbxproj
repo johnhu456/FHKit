@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9B48B0EDBD8644B78B9E5822 /* libPods-FHKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D0EE37E9828C8A0D45655B7 /* libPods-FHKit.a */; };
-		A34061756001D3977D0CA3FE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FE6990C6626B34BF27552C3 /* libPods.a */; };
 		E02ACA5A1C571AB200E8C049 /* FHTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E02ACA591C571AB200E8C049 /* FHTool.m */; };
 		E02ACA5D1C571AEC00E8C049 /* FHTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = E02ACA5C1C571AEC00E8C049 /* FHTextView.m */; };
 		E02C97D61D83ADE7003E2810 /* NSURL+FHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E02C97D51D83ADE7003E2810 /* NSURL+FHExtension.m */; };
@@ -111,7 +110,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A34061756001D3977D0CA3FE /* libPods.a in Frameworks */,
 				9B48B0EDBD8644B78B9E5822 /* libPods-FHKit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

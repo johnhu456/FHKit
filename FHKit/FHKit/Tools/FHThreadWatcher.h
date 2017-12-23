@@ -30,6 +30,6 @@
  @param handler A block object called when main thread stuck more than warning time interval.
                 Param callStack contains the call stack before main thread get stuck.
  */
-- (void)startWatchWithWarningHandler:(void(^)(NSArray <NSString *> *callStack))handler;
+- (void)startWatchWithWarningHandler:(void(^)(NSString *callStack))handler;
 
 @end

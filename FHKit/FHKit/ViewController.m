@@ -53,7 +53,9 @@
 //    NSString *str1 = [date2 strfTimeStringWithFormat:@"%Y-%m-%dT%H:%M:%S%z"];
 //    NSDate *date3 = [NSDate strpDateWithFormatString:str1 inFormat:@"%Y-%m-%dT%H:%M:%S%z"];
 //    NSLog(@"%@",date3);
-    [[FHThreadWatcher sharedInstance] startWatch];
+    [[FHThreadWatcher sharedInstance] startWatchWithWarningHandler:^(NSString *callStack) {
+        NSLog(@"%@",callStack);
+    }];
     
     
     self.busyJobTimer = [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(onBusyJobTimeout) userInfo:nil repeats:true];
