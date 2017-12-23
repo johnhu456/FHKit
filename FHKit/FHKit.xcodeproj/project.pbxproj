@@ -21,6 +21,7 @@
 		E098D64E1C7303D4005CAB4E /* FHLblWithInfoBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = E098D64D1C7303D4005CAB4E /* FHLblWithInfoBtn.m */; };
 		E098D6551C741F35005CAB4E /* UIButton+FHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E098D6541C741F35005CAB4E /* UIButton+FHExtension.m */; };
 		E098D6571C7426B5005CAB4E /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = E098D6561C7426B5005CAB4E /* Foundation+Log.m */; };
+		E0A658F61FEE41E7004DADA6 /* BSBacktraceLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A658F51FEE41E7004DADA6 /* BSBacktraceLogger.m */; };
 		E0C9E8A51D810DBF00EDAC51 /* NSDate+FHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C9E8A41D810DBF00EDAC51 /* NSDate+FHExtension.m */; };
 		E0D4C0F01C337325008AD8B6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E0D4C0EF1C337325008AD8B6 /* main.m */; };
 		E0D4C0F31C337325008AD8B6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E0D4C0F21C337325008AD8B6 /* AppDelegate.m */; };
@@ -78,6 +79,8 @@
 		E098D6531C741F35005CAB4E /* UIButton+FHExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+FHExtension.h"; sourceTree = "<group>"; };
 		E098D6541C741F35005CAB4E /* UIButton+FHExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+FHExtension.m"; sourceTree = "<group>"; };
 		E098D6561C7426B5005CAB4E /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
+		E0A658F41FEE41E7004DADA6 /* BSBacktraceLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BSBacktraceLogger.h; path = Tools/BSBacktraceLogger.h; sourceTree = "<group>"; };
+		E0A658F51FEE41E7004DADA6 /* BSBacktraceLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BSBacktraceLogger.m; path = Tools/BSBacktraceLogger.m; sourceTree = "<group>"; };
 		E0C9E8A31D810DBF00EDAC51 /* NSDate+FHExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+FHExtension.h"; sourceTree = "<group>"; };
 		E0C9E8A41D810DBF00EDAC51 /* NSDate+FHExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+FHExtension.m"; sourceTree = "<group>"; };
 		E0D4C0EB1C337324008AD8B6 /* FHKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FHKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,8 +154,7 @@
 		E08502311FE518EF002A30F7 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				E08502321FE51937002A30F7 /* FHThreadWatcher.h */,
-				E08502331FE51937002A30F7 /* FHThreadWatcher.m */,
+				E0A658F31FEE41B6004DADA6 /* FHThreadWatcher */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -188,6 +190,17 @@
 				E0C9E8A61D810DD600EDAC51 /* Foundation */,
 			);
 			name = Category;
+			sourceTree = "<group>";
+		};
+		E0A658F31FEE41B6004DADA6 /* FHThreadWatcher */ = {
+			isa = PBXGroup;
+			children = (
+				E0A658F41FEE41E7004DADA6 /* BSBacktraceLogger.h */,
+				E0A658F51FEE41E7004DADA6 /* BSBacktraceLogger.m */,
+				E08502321FE51937002A30F7 /* FHThreadWatcher.h */,
+				E08502331FE51937002A30F7 /* FHThreadWatcher.m */,
+			);
+			name = FHThreadWatcher;
 			sourceTree = "<group>";
 		};
 		E0C9E8A61D810DD600EDAC51 /* Foundation */ = {
@@ -489,6 +502,7 @@
 				E098D6571C7426B5005CAB4E /* Foundation+Log.m in Sources */,
 				E0F433931E2DF10700D93F7E /* UIImage+FHExtension.m in Sources */,
 				E06BAF221D75666C00903A1A /* NSDictionary+FHExtension.m in Sources */,
+				E0A658F61FEE41E7004DADA6 /* BSBacktraceLogger.m in Sources */,
 				E0C9E8A51D810DBF00EDAC51 /* NSDate+FHExtension.m in Sources */,
 				E02C97DF1D84039F003E2810 /* UIFont+FHExtension.m in Sources */,
 				E0D4C0F31C337325008AD8B6 /* AppDelegate.m in Sources */,
