@@ -80,6 +80,7 @@
 		E098D6561C7426B5005CAB4E /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
 		E0A658F41FEE41E7004DADA6 /* BSBacktraceLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BSBacktraceLogger.h; path = Tools/BSBacktraceLogger.h; sourceTree = "<group>"; };
 		E0A658F51FEE41E7004DADA6 /* BSBacktraceLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BSBacktraceLogger.m; path = Tools/BSBacktraceLogger.m; sourceTree = "<group>"; };
+		E0ACB1361FF514E5002582AB /* FHMarco.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHMarco.h; sourceTree = "<group>"; };
 		E0C9E8A31D810DBF00EDAC51 /* NSDate+FHExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+FHExtension.h"; sourceTree = "<group>"; };
 		E0C9E8A41D810DBF00EDAC51 /* NSDate+FHExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+FHExtension.m"; sourceTree = "<group>"; };
 		E0D4C0EB1C337324008AD8B6 /* FHKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FHKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,7 +101,6 @@
 		E0D4C1151C337325008AD8B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0F433911E2DF10700D93F7E /* UIImage+FHExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FHExtension.h"; sourceTree = "<group>"; };
 		E0F433921E2DF10700D93F7E /* UIImage+FHExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FHExtension.m"; sourceTree = "<group>"; };
-		E0FEC8821D6ED973001BE0A8 /* FHMarco.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FHMarco.h; path = ../FHMarco.h; sourceTree = "<group>"; };
 		E4A22757F8893DAA4DC24010 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		FE1FB063A2C7A219299FB2D1 /* Pods-FHKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FHKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FHKit/Pods-FHKit.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -173,7 +173,6 @@
 		E098D6501C740410005CAB4E /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				E0FEC8821D6ED973001BE0A8 /* FHMarco.h */,
 				E02ACA581C571AB200E8C049 /* FHTool.h */,
 				E02ACA591C571AB200E8C049 /* FHTool.m */,
 				E098D6561C7426B5005CAB4E /* Foundation+Log.m */,
@@ -199,6 +198,14 @@
 				E08502331FE51937002A30F7 /* FHThreadWatcher.m */,
 			);
 			name = FHThreadWatcher;
+			sourceTree = "<group>";
+		};
+		E0ACB1351FF514BC002582AB /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				E0ACB1361FF514E5002582AB /* FHMarco.h */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		E0C9E8A61D810DD600EDAC51 /* Foundation */ = {
@@ -254,6 +261,7 @@
 		E0D4C0ED1C337325008AD8B6 /* FHKit */ = {
 			isa = PBXGroup;
 			children = (
+				E0ACB1351FF514BC002582AB /* Base */,
 				E08502311FE518EF002A30F7 /* Tools */,
 				E06BAF1C1D73D7F000903A1A /* Encrypt */,
 				E098D6501C740410005CAB4E /* Common */,

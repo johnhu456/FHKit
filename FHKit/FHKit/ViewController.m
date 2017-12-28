@@ -18,9 +18,11 @@
 @property (nonatomic, strong) NSArray *characterArray;
 @property (nonatomic, strong) NSTimer*                 busyJobTimer;
 @end
+typedef struct{
+    int height;
+}Mytest;
 
 @implementation ViewController
-
 - (NSArray *)characterArray
 {
     return @[@"%a",@"%A",@"%b",@"%B",@"%c",@"%d",@"%H",@"%I",@"%j",@"%m",@"%M",@"%p",@"%S",@"%u",@"%w",@"%x",@"%X",@"%y",@"%Y",@"%Z"];
@@ -29,6 +31,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    @try {}
+    @finally{}
+    
     UIView *colorView = [[UIView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
     [self.view addSubview:colorView];
     colorView.backgroundColor = FHColorWithHexRGB(0x000000);
@@ -41,7 +46,7 @@
     [self.view addSubview:infoBtn];
     
     UILabel *label =[[ UILabel alloc] init];
-    label.textAlignment = FHTextAlignmentCenter;
+    label.textAlignment = NSTextAlignmentCenter;
     
 //    NSDate *date = [NSDate date];
 //    for (NSString *form in self.characterArray) {
