@@ -80,13 +80,11 @@ static void threadKiller() {
     self.runLoopCallBack = ^(CFRunLoopObserverRef observer, CFRunLoopActivity activity) {
         switch (activity) {
             case kCFRunLoopBeforeWaiting:
-                NSLog(@"beforeWaiting");
                 weakSelf.endTime = @([[NSDate date] timeIntervalSinceReferenceDate]);
                 break;
             case kCFRunLoopAfterWaiting:
                 weakSelf.endTime = nil;
                 weakSelf.startTime = @([[NSDate date] timeIntervalSinceReferenceDate]);
-                NSLog(@"afterWaiting");
                 break;
             default:
                 break;

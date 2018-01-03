@@ -11,6 +11,7 @@
 #import "FHLblWithInfoBtn.h"
 #import "NSDate+FHExtension.h"
 #import "FHThreadWatcher.h"
+#import "NSObject+FHCat.h"
 #import <stdarg.h>
 
 @interface ViewController ()
@@ -47,6 +48,11 @@ typedef struct{
     
     UILabel *label =[[ UILabel alloc] init];
     label.textAlignment = NSTextAlignmentCenter;
+    [label addObserverForKeyPath:@"text" observerHandler:^(id  _Nonnull oldValue, id  _Nonnull newValue, NSString * _Nonnull keyPath) {
+        NSLog(@"%@ %@ %@",newValue,oldValue,keyPath);
+        NSLog(@"%@ %@ %@",newValue,oldValue,keyPath);
+    }];
+    label.text = @"11";
     
 //    NSDate *date = [NSDate date];
 //    for (NSString *form in self.characterArray) {

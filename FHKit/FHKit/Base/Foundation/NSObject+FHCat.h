@@ -12,9 +12,22 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSObject (FHCat)
 
-+ (BOOL)swizzleInstanceOriginalMethod:(SEL)original withAnother:(SEL)another OBJC_AVAILABLE(10.5, 2.0, 9.0, 1.0, 2.0);
+#pragma mark - Runtime
+- (void)addDynamicProperty:(NSString *)propertyName
+                     value:(id)value
+                    strong:(BOOL)isStrong;
 
-+ (BOOL)swizzleClassOriginalMethod:(SEL)original withAnother:(SEL)another OBJC_AVAILABLE(10.5, 2.0, 9.0, 1.0, 2.0);
+- (nullable id)dynamicPropertyWithName:(NSString *)propertyName;
+
++ (BOOL)swizzleInstanceOriginalMethod:(SEL)original
+                          withAnother:(SEL)another OBJC_AVAILABLE(10.5, 2.0, 9.0, 1.0, 2.0);
+
++ (BOOL)swizzleClassOriginalMethod:(SEL)original
+                       withAnother:(SEL)another OBJC_AVAILABLE(10.5, 2.0, 9.0, 1.0, 2.0);
+
+#pragma mark - KVO
+- (void)addObserverForKeyPath:(NSString *)keyPath
+              observerHandler:(void(^)(id oldValue, id newValue, NSString *keyPath))handler;
 
 @end
 
