@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FHKit/Tools/FHThreadWatcher.m"
-            timestampString = "536680471.790651"
+            timestampString = "536932559.9349689"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "108"
@@ -35,13 +35,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FHKit/Base/Foundation/NSObject+FHCat.m"
-            timestampString = "536680471.791502"
+            filePath = "FHKit/FHDESOperator.m"
+            timestampString = "536992188.204047"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
-            landmarkName = "-addObserverForKeyPath:observerHandler:"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "+DESEncryptString:withKey:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

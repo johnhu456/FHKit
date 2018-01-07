@@ -12,6 +12,8 @@
 		E02ACA5D1C571AEC00E8C049 /* FHTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = E02ACA5C1C571AEC00E8C049 /* FHTextView.m */; };
 		E02C97D61D83ADE7003E2810 /* NSURL+FHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E02C97D51D83ADE7003E2810 /* NSURL+FHExtension.m */; };
 		E02C97DF1D84039F003E2810 /* UIFont+FHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E02C97DE1D84039F003E2810 /* UIFont+FHExtension.m */; };
+		E04E40172000EBFD00EB0894 /* NSString+FHCat.m in Sources */ = {isa = PBXBuildFile; fileRef = E04E40162000EBFD00EB0894 /* NSString+FHCat.m */; };
+		E04E401A2000F79400EB0894 /* NSData+FHCat.m in Sources */ = {isa = PBXBuildFile; fileRef = E04E40192000F79400EB0894 /* NSData+FHCat.m */; };
 		E06498491CB36E1000152045 /* FHAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = E06498481CB36E1000152045 /* FHAlertController.m */; };
 		E06612031D926B400090428B /* UIView+FHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E06612021D926B400090428B /* UIView+FHExtension.m */; };
 		E06BAF1F1D73D83D00903A1A /* FHDESOperator.m in Sources */ = {isa = PBXBuildFile; fileRef = E06BAF1E1D73D83D00903A1A /* FHDESOperator.m */; };
@@ -64,6 +66,10 @@
 		E02C97D51D83ADE7003E2810 /* NSURL+FHExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+FHExtension.m"; sourceTree = "<group>"; };
 		E02C97DD1D84039F003E2810 /* UIFont+FHExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+FHExtension.h"; sourceTree = "<group>"; };
 		E02C97DE1D84039F003E2810 /* UIFont+FHExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+FHExtension.m"; sourceTree = "<group>"; };
+		E04E40152000EBFD00EB0894 /* NSString+FHCat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+FHCat.h"; sourceTree = "<group>"; };
+		E04E40162000EBFD00EB0894 /* NSString+FHCat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+FHCat.m"; sourceTree = "<group>"; };
+		E04E40182000F79400EB0894 /* NSData+FHCat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+FHCat.h"; sourceTree = "<group>"; };
+		E04E40192000F79400EB0894 /* NSData+FHCat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+FHCat.m"; sourceTree = "<group>"; };
 		E06498471CB36E1000152045 /* FHAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHAlertController.h; sourceTree = "<group>"; };
 		E06498481CB36E1000152045 /* FHAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHAlertController.m; sourceTree = "<group>"; };
 		E06612011D926B400090428B /* UIView+FHExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FHExtension.h"; sourceTree = "<group>"; };
@@ -217,6 +223,10 @@
 			children = (
 				E0ACB1381FF5183C002582AB /* NSObject+FHCat.h */,
 				E0ACB1391FF5183C002582AB /* NSObject+FHCat.m */,
+				E04E40152000EBFD00EB0894 /* NSString+FHCat.h */,
+				E04E40162000EBFD00EB0894 /* NSString+FHCat.m */,
+				E04E40182000F79400EB0894 /* NSData+FHCat.h */,
+				E04E40192000F79400EB0894 /* NSData+FHCat.m */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -516,10 +526,12 @@
 				E02ACA5D1C571AEC00E8C049 /* FHTextView.m in Sources */,
 				E098D64E1C7303D4005CAB4E /* FHLblWithInfoBtn.m in Sources */,
 				E06498491CB36E1000152045 /* FHAlertController.m in Sources */,
+				E04E40172000EBFD00EB0894 /* NSString+FHCat.m in Sources */,
 				E0D4C0F61C337325008AD8B6 /* ViewController.m in Sources */,
 				E02C97D61D83ADE7003E2810 /* NSURL+FHExtension.m in Sources */,
 				E098D6571C7426B5005CAB4E /* Foundation+Log.m in Sources */,
 				E0F433931E2DF10700D93F7E /* UIImage+FHExtension.m in Sources */,
+				E04E401A2000F79400EB0894 /* NSData+FHCat.m in Sources */,
 				E06BAF221D75666C00903A1A /* NSDictionary+FHExtension.m in Sources */,
 				E0A658F61FEE41E7004DADA6 /* BSBacktraceLogger.m in Sources */,
 				E0ACB13A1FF5183C002582AB /* NSObject+FHCat.m in Sources */,

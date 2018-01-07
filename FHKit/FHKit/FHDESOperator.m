@@ -63,7 +63,6 @@
 + (NSString *)DESEncryptString:(NSString *)string withKey:(NSString *)key
 {
     NSData *data = [[NSData alloc] initWithBase64EncodedString:string options:NSDataBase64DecodingIgnoreUnknownCharacters];
-    
     NSData *encryptedData = [self DESEncryptedData:data withKey:key];
     
     NSString *base64EncryptedString = [encryptedData base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
