@@ -26,10 +26,20 @@
 
 - (NSString *)stringWithDESDecryptKey:(NSString *)key {
     NSData *plainData = [self dataUsingEncoding:NSUTF8StringEncoding];
-    NSData *base64DecodeData =  [[NSData alloc] initWithBase64EncodedData:plainData options:NSDataBase64DecodingIgnoreUnknownCharacters];
+    NSData *base64DecodeData = [[NSData alloc] initWithBase64EncodedData:plainData options:NSDataBase64DecodingIgnoreUnknownCharacters];
     NSData *decryptedData = [base64DecodeData dataWithDESDecryptKey:key];
     NSString *decryptedString = [[NSString alloc] initWithData:decryptedData encoding:NSUTF8StringEncoding];
     return decryptedString;
+}
+
+- (NSString *)stringWithURLEncoded
+{
+    return [self stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+}
+
+- (NSString *)stringWithURLDecoded
+{
+    return [self stringByRemovingPercentEncoding];
 }
 
 @end

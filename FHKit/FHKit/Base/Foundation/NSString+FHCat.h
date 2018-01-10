@@ -10,9 +10,14 @@
 
 @interface NSString (FHCat)
 
+#pragma mark - Encode & decode
 - (NSString *)md5String;
 
 - (NSString *)stringWithDESEncryptKey:(NSString *)key;
 
 - (NSString *)stringWithDESDecryptKey:(NSString *)key;
+
+- (NSString *)stringWithURLEncoded;
+
+- (NSString *)stringWithURLDecoded;
 @end
