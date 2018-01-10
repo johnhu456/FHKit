@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface NSString (FHCat)
 
@@ -20,4 +21,5 @@
 - (NSString *)stringWithURLEncoded;
 
 - (NSString *)stringWithURLDecoded;
+
 @end

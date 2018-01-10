@@ -11,6 +11,7 @@
 #import <CommonCrypto/CommonCrypto.h>
 @implementation NSString (FHCat)
 
+#pragma mark - Encode & decode
 - (NSString *)md5String {
     return [[NSString alloc] initWithData:[[self dataUsingEncoding:NSUTF8StringEncoding] md5Data] encoding: NSUTF8StringEncoding];
 }
@@ -32,13 +33,11 @@
     return decryptedString;
 }
 
-- (NSString *)stringWithURLEncoded
-{
+- (NSString *)stringWithURLEncoded {
     return [self stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
 }
 
-- (NSString *)stringWithURLDecoded
-{
+- (NSString *)stringWithURLDecoded {
     return [self stringByRemovingPercentEncoding];
 }
 
