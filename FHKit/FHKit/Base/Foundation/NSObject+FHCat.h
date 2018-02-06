@@ -13,7 +13,15 @@ NS_ASSUME_NONNULL_BEGIN
 @interface NSObject (FHCat)
 
 #pragma mark - Runtime
-- (void)addDynamicProperty:(NSString *)propertyName
+
+/**
+ Set a property to a instance dynamically
+
+ @param propertyName The property's name
+ @param value The property's value
+ @param isStrong ARC association policy, YES for strong, NO for weak.
+ */
+- (void)setDynamicProperty:(NSString *)propertyName
                      value:(id)value
                     strong:(BOOL)isStrong;
 

@@ -55,7 +55,7 @@ static NSString *const kObserversDictionary = @"kObserversDictionary";       //O
 @implementation NSObject (FHCat)
 
 #pragma mark - Runtime
-- (void)addDynamicProperty:(NSString *)propertyName value:(id)value strong:(BOOL)isStrong {
+- (void)setDynamicProperty:(NSString *)propertyName value:(id)value strong:(BOOL)isStrong {
     if (value) {
         objc_AssociationPolicy strongPolicy = isStrong ? OBJC_ASSOCIATION_RETAIN_NONATOMIC : OBJC_ASSOCIATION_ASSIGN;
         objc_setAssociatedObject(self, CFBridgingRetain(propertyName), value, strongPolicy);
@@ -111,7 +111,7 @@ static NSString *const kObserversDictionary = @"kObserversDictionary";       //O
     }
     else {
         NSMutableDictionary *newDic = [[NSMutableDictionary alloc] init];
-        [self addDynamicProperty:kObserversDictionary value:newDic strong:YES];
+        [self setDynamicProperty:kObserversDictionary value:newDic strong:YES];
         return newDic;
     }
 }

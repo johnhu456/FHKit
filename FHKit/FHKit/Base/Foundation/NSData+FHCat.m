@@ -30,8 +30,7 @@
     return [self desOperation:kCCDecrypt withKey:key];
 }
 
-- (NSData *)desOperation:(CCOperation)operation withKey:(NSString *)key
-{
+- (NSData *)desOperation:(CCOperation)operation withKey:(NSString *)key {
     char keyPtr[kCCKeySizeAES256 + 1];
     bzero(keyPtr, sizeof(keyPtr));
     [key getCString:keyPtr maxLength:sizeof(keyPtr) encoding:NSUTF8StringEncoding];
