@@ -90,3 +90,6 @@
 #endif
 
 #endif
+
+/*==================Else=====================*/
+#define MEPKeyPath(t, s) ((NO && ((void)t.s, NO)), @#s)
